@@ -4,8 +4,7 @@
              x:Class="ContadorManual.Maui.Views.MainPage"
              Title="Contador Manual">
 
-    <StackLayout 
-        Orientation="Vertical" 
+    <VerticalStackLayout 
         Spacing="16"
         Margin="12"
         Padding="16">
@@ -15,22 +14,21 @@
         <Border
             Stroke="Gray"
             StrokeThickness="2">
-            <Label Text="0"
+            <Label Text="{Binding Path=Conteo}"
                    Padding="0,36"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
-                   x:Name="ConteoLabel"/>
+                   />
         </Border>
-        <StackLayout
-            Orientation="Horizontal"
-            HorizontalOptions="Center"
+        <HorizontalStackLayout
+            HorizontalOptions="Center" 
             Spacing="24"
             Margin="0,24,0,0">
             <Button Text="Contar"
                     Clicked="OnContarButtonClicked"/>
             <Button Text="Reiniciar"
                     Clicked="OnReiniciarButtonClicked"/>
-        </StackLayout>
-    </StackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>
