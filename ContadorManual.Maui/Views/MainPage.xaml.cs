@@ -22,4 +22,10 @@ public partial class MainPage : ContentPage
         _contador.Reiniciar();
         //ConteoLabel.Text = _contador.Conteo.ToString();
     }
+
+    //Se quito el manejador de eventos para ponerlo como enlace de datos
+    private void OnIncrementoStepperValueChanged(object sender, ValueChangedEventArgs e)
+    {
+        _contador.Incremento = (int)IncrementoStepper.Value;
+    }
 }
